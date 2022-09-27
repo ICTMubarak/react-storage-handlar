@@ -1,23 +1,17 @@
 import logo from './logo.svg';
 import './App.css';
+import { add, multiply } from './Calculate/calculate';
+//import  {add multiply } from './Calculate/calculate';
 
 function App() {
+  const n1 = 2;
+  const n2 = 5;
+  const total = add(n1, n2);
+  const mulResult = multiply(n1, n2);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+       <h1>Add result: {total}</h1>
+       <h1>mul result: {mulResult}</h1>
     </div>
   );
 }
